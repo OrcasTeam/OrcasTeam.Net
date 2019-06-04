@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.202
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrcasTeam.Shandard.Libary", "OrcasTeam.Shandard.Libary\OrcasTeam.Shandard.Libary.csproj", "{BC617CF6-D0A8-41C5-9A20-553223A5FF34}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrcasTeam.Shandard.Libary.Test", "OrcasTeam.Shandard.Libary.Test\OrcasTeam.Shandard.Libary.Test.csproj", "{323FB8A4-C9A4-4888-9228-C624F9A12CED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BC617CF6-D0A8-41C5-9A20-553223A5FF34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC617CF6-D0A8-41C5-9A20-553223A5FF34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC617CF6-D0A8-41C5-9A20-553223A5FF34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC617CF6-D0A8-41C5-9A20-553223A5FF34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{323FB8A4-C9A4-4888-9228-C624F9A12CED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{323FB8A4-C9A4-4888-9228-C624F9A12CED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{323FB8A4-C9A4-4888-9228-C624F9A12CED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{323FB8A4-C9A4-4888-9228-C624F9A12CED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {90452C34-06DA-4119-8876-B54D5667747B}
+	EndGlobalSection
+EndGlobal
