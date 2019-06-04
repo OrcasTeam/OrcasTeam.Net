@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace OrcasTeam.Shandard.Libary.Extensions
 {
-   public static partial class LinqExtension
+   public static class LinqExtension
     {
         /// <summary>
         ///          如果条件为真,则通过指定条件进行筛选<see cref="IEnumerable{T}"/>>
@@ -30,7 +29,7 @@ namespace OrcasTeam.Shandard.Libary.Extensions
         public static IEnumerable<TSource> DistinctBy<TSource, TKey>(this IEnumerable<TSource> source,
             Func<TSource, TKey> keySelector)
         {
-            if (source?.Count() == 0) yield break;
+            if (source?.Any() !=true) yield break;
             var seenKeys = new HashSet<TKey>();
             foreach (var element in source)
             {
@@ -50,7 +49,7 @@ namespace OrcasTeam.Shandard.Libary.Extensions
         {
             if (batchSize <= 0)
                 throw new ArgumentException($"{nameof(batchSize)}必须大于0");
-            if (source?.Count() == 0) yield break;
+            if (source?.Any() != true) yield break;
             while (source.Any())
             {
                 yield return source.Take(batchSize);
