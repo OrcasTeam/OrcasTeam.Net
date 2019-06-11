@@ -16,9 +16,9 @@ namespace OrcasTeam.Shandard.Libary.Extensions
         ///     默认为FALSE
         /// </param>
         /// <returns>TRUE 存在/FALSE 不存在</returns>
-        public static bool HasAttribute<T>(this MemberInfo type, bool inherit = false)
+        public static bool IsDefined<T>(this MemberInfo type, bool inherit = false)
             where T : Attribute
-            => HasAttribute(type, typeof(T), inherit);
+            => IsDefined(type, typeof(T), inherit);
 
         /// <summary>
         ///     判断当前当前中是否具有指定特性类型
@@ -30,7 +30,7 @@ namespace OrcasTeam.Shandard.Libary.Extensions
         /// </param>
         /// <param name="inherit"></param>
         /// <returns>TRUE 是/FALSE 不是</returns>
-        public static bool HasAttribute(this MemberInfo type, Type target, bool inherit = false)
+        public static bool IsDefined(this MemberInfo type, System.Type target, bool inherit = false)
         {
             if (!typeof(Attribute).IsAssignableFrom(target))
                 throw new ArgumentException($"{nameof(target)}类型不是一个特性");
@@ -48,9 +48,9 @@ namespace OrcasTeam.Shandard.Libary.Extensions
         ///     默认为FALSE
         /// </param>
         /// <returns></returns>
-        public static bool HasAttribute<T>(this object obj, bool inherit = false)
+        public static bool IsDefined<T>(this object obj, bool inherit = false)
             where T : Attribute
-            => HasAttribute<T>(obj.GetType(), inherit);
+            => IsDefined<T>(obj.GetType(), inherit);
 
         /// <summary>
         ///     判断当前对象的类型是否具有指定特性
@@ -65,7 +65,7 @@ namespace OrcasTeam.Shandard.Libary.Extensions
         ///     默认为FALSE
         /// </param>
         /// <returns></returns>
-        public static bool HasAttribute(this object obj, Type target, bool inherit = false)
-            => HasAttribute(obj.GetType(), target, inherit);
+        public static bool IsDefined(this object obj, Type target, bool inherit = false)
+            => IsDefined(obj.GetType(), target, inherit);
     }
 }

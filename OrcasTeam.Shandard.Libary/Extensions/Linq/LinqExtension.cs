@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 
 namespace OrcasTeam.Shandard.Libary.Extensions
@@ -69,5 +70,31 @@ namespace OrcasTeam.Shandard.Libary.Extensions
             foreach (var t in target)
                 source.Add(t);
         }
+
+        /// <summary>
+        ///         如果不存在则添加
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="source"></param>
+        /// <param name="item"></param>
+        /// <returns></returns>
+        public static Boolean AddIfNotContains<T>(this ICollection<T> source, T item)
+        {
+            if (source == null)
+                throw new ArgumentNullException("source");
+            if (source.Contains(item))
+                return false;
+            source.Add(item);
+            return true;
+        }
+
+        /// <summary>
+        ///         判断当前集合是否是NULL或空集合
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="source"></param>
+        /// <returns></returns>
+        public static Boolean IsNullOrEmpty<T>(this IEnumerable<T> source)
+            => source?.Any() == true;
     }
 }

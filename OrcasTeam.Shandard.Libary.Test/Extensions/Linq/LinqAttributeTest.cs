@@ -23,5 +23,25 @@ namespace OrcasTeam.Shandard.Libary.Test.Extensions
 
             Assert.Equal<int>(5, list.Count);
         }
+
+        [Fact]
+        public void AddIfNotContainsTest()
+        {
+            IList<string> list = new List<string>();
+            Assert.True(list.AddIfNotContains("123"));
+            Assert.False(list.AddIfNotContains("123"));
+            Assert.Equal(1,list.Count);
+        }
+        [Fact]
+        public void IsNullOrEmptyTest()
+        {
+            IList<string> list = null;
+            Assert.False(list.IsNullOrEmpty());
+            list = new List<string>();
+            Assert.False(list.IsNullOrEmpty());
+            list.Add("1");
+            Assert.True(list.IsNullOrEmpty());
+
+        }
     }
 }
