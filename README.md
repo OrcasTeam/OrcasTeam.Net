@@ -1,2 +1,1 @@
-# OrcasTeam.Net
-.Net类库
+OrcasTeam团队中.Net版的帮助类库
