@@ -109,7 +109,7 @@ namespace OrcasTeam.Shandard.Libary.Extensions
         /// <param name="splitNum"></param>
         /// <param name="cancellation"></param>
         /// <returns></returns>
-        public static async Task SplitExecute<T>(this IEnumerable<T> sources,
+        public static async Task SplitExecuteAsync<T>(this IEnumerable<T> sources,
             Func<T, Task> func,
             int splitNum = 10,
             CancellationToken cancellation = default)
