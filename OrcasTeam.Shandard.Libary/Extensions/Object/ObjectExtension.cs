@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace OrcasTeam.Shandard.Libary.Extensions
 {
@@ -31,7 +29,7 @@ namespace OrcasTeam.Shandard.Libary.Extensions
             }
 
             var doubleValueStr = x.ToString("#." + str);
-            return doubleValueStr.Substring(0, doubleValueStr.IndexOf(".") + 1 + digits);
+            return doubleValueStr.Substring(0, doubleValueStr.IndexOf(".", StringComparison.Ordinal) + 1 + digits);
         }
 
         /// <summary>
